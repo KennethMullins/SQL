@@ -1,0 +1,9 @@
+Created table rating my favorite books
+
+CREATE TABLE books (id INTEGER PRIMARY KEY, name TEXT, rating INTEGER);
+
+INSERT into books VALUES (1,'Harry Potter',9);
+INSERT into books VALUES (2,'Bible', 10);
+SELECT * FROM books;
+INSERT into books VALUES (3, 'Of Mice and Men', 5);
+SELECT * FROM books;
