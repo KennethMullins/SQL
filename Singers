@@ -1,0 +1,24 @@
+Table of famous singers
+CREATE TABLE singers 
+(id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, age INTEGER);
+
+INSERT INTO singers (name,age) VALUES ('Beyonce','40');
+INSERT INTO singers (name,age) VALUES ('Adele','35');
+INSERT INTO singers (name,age) VALUES ('Ed Sheeran','32');
+INSERT INTO singers (name,age) VALUES ('Elton John','60');
+
+Table of singers popular songs
+CREATE TABLE songs
+(id INTEGER PRIMARY KEY AUTOINCREMENT, singer_id INTEGER, name TEXT);
+
+INSERT INTO songs (singer_id,name) VALUES ('1','Single Ladies');
+INSERT INTO songs (singer_id,name) VALUES ('2','Someone Like You');
+INSERT INTO songs (singer_id,name) VALUES ('3','Photograph');
+INSERT INTO songs (singer_id,name) VALUES ('4','Tiny Dancer');
+
+Joining the singers and their famous songs
+
+SELECT singers.name,songs.name
+FROM singers
+JOIN songs
+ON singers.id=songs.singer_id;
